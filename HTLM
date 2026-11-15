@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade_with_preet | Trading Education</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 20px 0;
+      background: #101a2d;
+      border-bottom: 1px solid #26334b;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo { font-size: 1.35rem; font-weight: bold; color: #64e6a5; }
+    nav a { color: #e8edf5; text-decoration: none; margin-left: 18px; }
+
+    .hero {
+      padding: 100px 0;
+      text-align: center;
+      background: radial-gradient(circle at top, #173b3a, #0b1220 65%);
+    }
+
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 1.1; }
+    .hero h1 span { color: #64e6a5; }
+    .hero p { max-width: 650px; margin: 20px auto 28px; color: #bdc7d8; }
+
+    .button {
+      display: inline-block;
+      background: #64e6a5;
+      color: #08130e;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section { padding: 70px 0; }
+    h2 { font-size: 2rem; margin-bottom: 14px; }
+    .intro { color: #bdc7d8; max-width: 700px; margin-bottom: 30px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #121e32;
+      border: 1px solid #26334b;
+      padding: 24px;
+      border-radius: 14px;
+    }
+
+    .card h3 { color: #64e6a5; margin-bottom: 10px; }
+    .card p { color: #bdc7d8; }
+
+    .notice {
+      background: #171f2d;
+      border-left: 4px solid #f2c14e;
+      padding: 18px;
+      color: #d7deea;
+      border-radius: 6px;
+    }
+
+    .contact { text-align: center; }
+    footer {
+      text-align: center;
+      padding: 24px 0;
+      color: #9eabc0;
+      border-top: 1px solid #26334b;
+    }
+
+    @media (max-width: 700px) {
+      nav { flex-direction: column; }
+      nav a { margin: 0 8px; }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 75px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Trade_with_preet</div>
+        <div>
+          <a href="#about">About</a>
+          <a href="#topics">Topics</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Learn trading with <span>Trade_with_preet</span></h1>
+        <p>
+          Trading ke concepts, market basics aur risk management ko samajhne ke
+          liye educational resources dekhein.
+        </p>
+        <a class="button" href="#topics">Explore Topics</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="intro">
+          Trade_with_preet ek educational page hai jo trading se judi basic
+          jaankari share karne ke liye banaya gaya hai. Yahan apna introduction
+          aur experience apne hisaab se add karein.
+        </p>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="container">
+        <h2>Learning Topics</h2>
+        <p class="intro">Apne content ke mutabiq in sections ko edit kar sakte hain.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Market Basics</h3>
+            <p>Trading terms, charts aur market ke basic concepts ke baare mein seekhein.</p>
+          </article>
+
+          <article class="card">
+            <h3>Risk Management</h3>
+            <p>Risk ko samajhna aur responsible decision-making ki ahmiyat jaaniye.</p>
+          </article>
+
+          <article class="card">
+            <h3>Learning Resources</h3>
+            <p>Apne educational videos, articles ya social media links yahan share karein.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="notice">
+          <strong>Disclaimer:</strong> Yeh website sirf educational information ke liye hai,
+          financial advice nahi. Trading mein financial loss ka risk hota hai.
+          Koi bhi decision lene se pehle apni research karein aur zarurat par
+          qualified financial professional se salah lein.
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="intro" style="margin: 0 auto 22px;">
+          Apne contact ya social media details yahan add karein.
+        </p>
+        <a class="button" href="https://instagram.com/" target="_blank" rel="noopener">
+          Instagram par milen
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Trade_with_preet</div>
+  </footer>
+
+</body>
+</html>
