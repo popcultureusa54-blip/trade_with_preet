@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trade_with_preet | Premium Trading Education</title>
+  <meta name="description" content="Trade_with_preet offers premium trading education, market insight, strategy guidance, and risk management learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111d;
+      --bg2:#0d1b2a;
+      --panel:#101d2f;
+      --panel-2:#13263e;
+      --accent:#43e0a0;
+      --accent2:#84f7c7;
+      --gold:#f7c75a;
+      --text:#ebf3ff;
+      --muted:#a7b7d1;
+      --line:rgba(255,255,255,0.08);
+      --shadow:0 20px 50px rgba(0,0,0,0.25);
+      --success:#14c88d;
+      --danger:#ff6b6b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,#07111d 0%, #0b1625 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; padding:0; margin:0; }
+
+    .container{
+      width:min(1180px, 90%);
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(12px);
+      background:rgba(7,17,29,0.75);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      min-height:78px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:0.02em;
+      font-size:1.2rem;
+    }
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--accent),#7dd9ff);
+      color:#07111d;
+      font-weight:900;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:26px;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    .nav-links a:hover{
+      color:var(--text);
+    }
+
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 24px;
+      border-radius:12px;
+      font-weight:700;
+      transition:0.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#07111d;
+      box-shadow:0 12px 30px rgba(67,224,160,0.35);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.15);
+      background:rgba(255,255,255,0.02);
+      color:var(--text);
+    }
+
+    .hero{
+      padding:80px 0 70px;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(67,224,160,0.25), transparent 24%),
+        radial-gradient(circle at 85% 10%, rgba(125,217,255,0.15), transparent 22%),
+        linear-gradient(180deg, rgba(8,16,27,0.6), rgba(7,17,29,0.9));
+    }
+
+    .hero-wrap{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(67,224,160,0.12);
+      border:1px solid rgba(67,224,160,0.22);
+      color:var(--accent2);
+      font-weight:600;
+      border-radius:999px;
+      padding:9px 14px;
+      font-size:0.82rem;
+      margin-bottom:18px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 14px rgba(67,224,160,0.75);
+    }
+
+    h1{
+      font-size:clamp(2.7rem, 5vw, 5rem);
+      line-height:1.04;
+      margin:0 0 18px;
+      letter-spacing:-0.05em;
+    }
+
+    .highlight{
+      color:var(--accent);
+    }
+
+    .hero p{
+      font-size:1.08rem;
+      max-width:620px;
+      color:var(--muted);
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:30px;
+    }
+
+    .stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:22px;
+    }
+
+    .stat{
+      min-width:120px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.8rem;
+      font-weight:800;
+      letter-spacing:-0.05em;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg,rgba(19,38,62,0.95),rgba(15,29,45,0.95));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .chart-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    .pill{
+      background:rgba(247,199,90,0.1);
+      color:var(--gold);
+      border:1px solid rgba(247,199,90,0.25);
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:0.8rem;
+      font-weight:700;
+    }
+
+    .mini-user{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .avatar{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#8ef2c8,#43e0a0);
+      display:grid;
+      place-items:center;
+      color:#07111d;
+      font-weight:800;
+    }
+
+    .mini-user div{
+      line-height:1.2;
+    }
+
+    .mini-user small{
+      color:var(--muted);
+      display:block;
+      margin-top:2px;
+    }
+
+    .chart-box{
+      background:rgba(7,17,29,0.8);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      margin-top:8px;
+      margin-bottom:18px;
+    }
+
+    .chart-grid{
+      display:grid;
+      grid-template-columns:repeat(12, 1fr);
+      height:180px;
+      align-items:end;
+      gap:8px;
+      margin-top:20px;
+    }
+
+    .bar{
+      border-radius:10px 10px 0 0;
+      background:linear-gradient(180deg,var(--accent),#7dd9ff);
+      box-shadow:0 8px 22px rgba(67,224,160,0.2);
+    }
+
+    .chart-row{
+      display:flex;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:0.72rem;
+      margin-top:8px;
+    }
+
+    .card-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .card-list li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--text);
+      background:rgba(255,255,255,0.02);
+      border:1px solid var(--line);
+      padding:10px 12px;
+      border-radius:12px;
+    }
+
+    .check{
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      background:rgba(67,224,160,0.12);
+      color:var(--accent);
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      font-size:0.9rem;
+    }
+
+    section{
+      padding:88px 0;
+    }
+
+    .section-header{
+      text-align:center;
+      margin-bottom:46px;
+    }
+
+    .section-header h2{
+      font-size:clamp(2rem,4vw,3rem);
+      margin:0 0 10px;
+      letter-spacing:-0.04em;
+    }
+
+    .section-header p{
+      max-width:700px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:1.03rem;
+    }
+
+    .about{
+      background:linear-gradient(180deg, rgba(16,29,47,0.55), rgba(12,19,29,0.65));
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:42px;
+      align-items:center;
+    }
+
+    .about-image{
+      min-height:480px;
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      position:relative;
+    }
+
+    .floating-tag{
+      position:absolute;
+      left:24px;
+      bottom:24px;
+      background:rgba(7,17,29,0.88);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:16px 18px;
+      max-width:240px;
+    }
+
+    .floating-tag h4{
+      margin:0 0 6px;
+      font-size:1.1rem;
+    }
+
+    .floating-tag p{
+      margin:0;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    .about-copy h3{
+      color:var(--accent2);
+      font-size:0.82rem;
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      margin-bottom:14px;
+    }
+
+    .about-copy h2{
+      margin:0 0 18px;
+      font-size:clamp(2rem,4vw,3.2rem);
+      line-height:1.12;
+      letter-spacing:-0.04em;
+    }
+
+    .about-copy p{
+      color:var(--muted);
+      margin:0 0 20px;
+      font-size:1rem;
+    }
+
+    .check-list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .check-list li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:var(--text);
+      font-weight:500;
+    }
+
+    .check-list li::before{
+      content:"✓";
+      width:25px;
+      height:25px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(67,224,160,0.12);
+      color:var(--accent);
+      font-weight:900;
+    }
+
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:22px;
+    }
+
+    .feature-card{
+      background:linear-gradient(180deg, rgba(16,29,47,0.9), rgba(11,20,31,0.9));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px 22px;
+      box-shadow:var(--shadow);
+      transition:transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(67,224,160,0.25);
+    }
+
+    .icon-box{
+      width:56px;
+      height:56px;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(67,224,160,0.15), rgba(125,217,255,0.18));
+      display:grid;
+      place-items:center;
+      font-size:1.7rem;
+      margin-bottom:18px;
+    }
+
+    .feature-card h3{
+      margin:0 0 10px;
+      font-size:1.3rem;
+    }
+
+    .feature-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:0.98rem;
+    }
+
+    .numbers{
+      background:linear-gradient(135deg, rgba(18,38,62,0.92), rgba(9,22,36,0.92));
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .numbers-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .number-card{
+      background:rgba(255,255,255,0.02);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px 18px;
+      text-align:center;
+    }
+
+    .number-card strong{
+      display:block;
+      font-size:2.2rem;
+      letter-spacing:-0.05em;
+      color:var(--accent2);
+      margin-bottom:6px;
+    }
+
+    .number-card span{
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    .pricing{
+      background:linear-gradient(180deg, rgba(10,16,25,0.8), rgba(7,17,29,0.9));
+    }
+
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:22px;
+    }
+
+    .price-card{
+      background:linear-gradient(180deg,#0c1b2b,#12263f);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px 24px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .price-card.featured{
+      border-color:rgba(67,224,160,0.35);
+      box-shadow:0 18px 48px rgba(67,224,160,0.15);
+      transform:scale(1.02);
+    }
+
+    .tag{
+      position:absolute;
+      top:14px;
+      right:14px;
+      background:rgba(67,224,160,0.12);
+      color:var(--accent2);
+      border:1px solid rgba(67,224,160,0.25);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:0.7rem;
+      font-weight:700;
+    }
+
+    .price-card h3{
+      margin:0 0 14px;
+      font-size:1.5rem;
+    }
+
+    .price{
+      font-size:2.5rem;
+      font-weight:800;
+      letter-spacing:-0.06em;
+      margin-bottom:14px;
+    }
+
+    .price small{
+      font-size:0.9rem;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .price-card p{
+      color:var(--muted);
+      margin:0 0 18px;
+    }
+
+    .price-card ul{
+      display:grid;
+      gap:10px;
+      margin-bottom:24px;
+    }
+
+    .price-card li{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--text);
+    }
+
+    .price-card li::before{
+      content:"✓";
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:rgba(67,224,160,0.12);
+      color:var(--accent);
+      display:grid;
+      place-items:center;
+      font-size:0.8rem;
+      font-weight:900;
+    }
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:24px;
+    }
+
+    .quote{
+      background:linear-gradient(180deg, rgba(16,29,47,0.9), rgba(12,18,27,0.9));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px 20px;
+    }
+
+    .stars{
+      color:var(--gold);
+      letter-spacing:2px;
+      margin-bottom:14px;
+      font-size:1.05rem;
+    }
+
+    .quote p{
+      margin:0 0 18px;
+      color:var(--muted);
+    }
+
+    .person{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .person .avatar{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:linear-gradient(135deg, #f7d38d, #cfd9ff);
+      color:#0b1625;
+      font-weight:800;
+    }
+
+    .person strong{
+      display:block;
+    }
+
+    .person small{
+      color:var(--muted);
+    }
+
+    .cta{
+      background:linear-gradient(135deg, rgba(67,224,160,0.15), rgba(125,217,255,0.09));
+      border-top:1px solid rgba(67,224,160,0.18);
+      border-bottom:1px solid rgba(67,224,160,0.18);
+    }
+
+    .cta-box{
+      background:linear-gradient(135deg, #0d1d2a, #102b3a);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:28px;
+      padding:34px 32px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .cta-box h2{
+      margin:0 0 6px;
+      letter-spacing:-0.04em;
+      font-size:clamp(1.8rem,3vw,2.8rem);
+    }
+
+    .cta-box p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    footer{
+      padding:25px 0 40px;
+      background:#07111d;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .socials{
+      display:flex;
+      gap:12px;
+    }
+
+    .socials a{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--line);
+    }
+
+    @media (max-width: 980px){
+      .hero-wrap,
+      .about-grid,
+      .features-grid,
+      .pricing-grid,
+      .testimonial-grid,
+      .numbers-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width: 560px){
+      .hero{
+        padding-top:54px;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .nav{
+        min-height:70px;
+      }
+
+      .stats{
+        gap:16px;
+      }
+
+      .stat{
+        min-width:100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="brand-mark">T</div>
+        <span>Trade_with_preet</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-secondary" href="#pricing">Plans</a>
+        <a class="btn btn-primary" href="#contact">Join Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-wrap">
+        <div>
+          <div class="eyebrow">Market Education • Smart Learning</div>
+          <h1>Trade smarter with <span class="highlight">clarity</span>, not chaos.</h1>
+          <p>
+            Trade_with_preet ne learners ke liye easy-to-understand trading education
+            provide karne ka mission rakha hai — market basics, strategy building,
+            and risk control ke sath.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">Get Started</a>
+            <a class="btn btn-secondary" href="#features">Explore Courses</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>12k+</strong>
+              <span>Learners</span>
+            </div>
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Rating</span>
+            </div>
+            <div class="stat">
+              <strong>96%</strong>
+              <span>Completion</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="chart-head">
+            <span class="pill">Live Market View</span>
+            <div class="mini-user">
+              <div class="avatar">P</div>
+              <div>
+                <strong>Preet</strong>
+                <small>Mentor</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <div style="font-size:0.72rem;color:var(--muted);">Growth Index</div>
+                <div style="font-size:1.7rem; font-weight:800; margin-top:6px;">+18.4%</div>
+              </div>
+              <div style="color:var(--accent); font-weight:700;">Bullish</div>
+            </div>
+
+            <div class="chart-grid">
+              <div class="bar" style="height:35%"></div>
+              <div class="bar" style="height:52%"></div>
+              <div class="bar" style="height:48%"></div>
+              <div class="bar" style="height:67%"></div>
+              <div class="bar" style="height:60%"></div>
+              <div class="bar" style="height:72%"></div>
+              <div class="bar" style="height:68%"></div>
+              <div class="bar" style="height:88%"></div>
+              <div class="bar" style="height:82%"></div>
+              <div class="bar" style="height:95%"></div>
+              <div class="bar" style="height:100%"></div>
+              <div class="bar" style="height:92%"></div>
+            </div>
+
+            <div class="chart-row">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+            </div>
+          </div>
+
+          <ul class="card-list">
+            <li><span class="check">✓</span>Market structure explained clearly</li>
+            <li><span class="check">✓</span>Risk-first trading mindset</li>
+            <li><span class="check">✓</span>Strategy breakdowns and routines</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <div class="floating-tag">
+            <h4>Focus on discipline</h4>
+            <p>Trading is not about guesswork — it is about process and preparation.</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <h3>About Us</h3>
+          <h2>Learn the art of trading with structure and confidence.</h2>
+          <p>
+            Trade_with_preet ka focus hai ke learners ko simple, practical aur
+            realistic trading education provide ki jaaye. Hum market psychology,
+            chart reading, strategy planning, aur risk management ko clear tareeqe
+            se samjhaate hain.
+          </p>
+          <p>
+            Aap beginner ho ya intermediate, yahan aapko actionable insights milte
+            hain taaki aap informed decisions kar sakein.
+          </p>
+
+          <ul class="check-list">
+            <li>Beginner to advanced learning paths</li>
+            <li>Risk management and discipline training</li>
+            <li>Practical sessions and clear market education</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>What you will learn</h2>
+          <p>
+            Trading aur market education ke key areas ko step-by-step samjaaya jaata hai.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon-box">📈</div>
+            <h3>Market Basics</h3>
+            <p>Price action, trend direction, support resistance, and market structure explained clearly.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-box">🧠</div>
+            <h3>Psychology</h3>
+            <p>Emotional discipline, patience, and responsible decision-making to improve consistency.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-box">🛡️</div>
+            <h3>Risk Management</h3>
+            <p>Capital protection, position sizing, and planning methods to reduce emotional trading mistakes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbers">
+      <div class="container numbers-grid">
+        <div class="number-card">
+          <strong>5+</strong>
+          <span>Core modules</span>
+        </div>
+        <div class="number-card">
+          <strong>30+</strong>
+          <span>Learning videos</span>
+        </div>
+        <div class="number-card">
+          <strong>1:1</strong>
+          <span>Mentor support</span>
+        </div>
+        <div class="number-card">
+          <strong>24/7</strong>
+          <span>Community access</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simple pricing</h2>
+          <p>Choose the plan that fits your learning pace and goals.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$19 <small>/month</small></div>
+            <p>Good for beginners starting their trading education journey.</p>
+            <ul>
+              <li>Basic market lessons</li>
+              <li>Trade journals</li>
+              <li>Email support</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary">Choose Starter</a>
+          </div>
+
+          <div class="price-card featured">
+            <div class="tag">Most Popular</div>
+            <h3>Pro</h3>
+            <div class="price">$49 <small>/month</small></div>
+            <p>Best for serious learners wanting a deeper roadmap and guidance.</p>
+            <ul>
+              <li>Full strategy modules</li>
+              <li>Live market breakdowns</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose Pro</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Elite</h3>
+            <div class="price">$99 <small>/month</small></div>
+            <p>For people who want advanced concepts and deeper mentorship access.</p>
+            <ul>
+              <li>Advanced sessions</li>
+              <li>Direct mentor access</li>
+              <li>Exclusive resources</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary">Choose Elite</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>What learners say</h2>
+          <p>People value clear teaching, focus on discipline, and practical guidance.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="quote">
+            <div class="stars">★★★★★</div>
+            <p>“Trade_with_preet ne market concepts ko bahut asaan tarah samjhaya. Mera mindset aur discipline improve hua.”</p>
+            <div class="person">
+              <div class="avatar">A</div>
+              <div>
+                <strong>Arjun</strong>
+                <small>Beginner Trader</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote">
+            <div class="stars">★★★★★</div>
+            <p>“Risk management aur planning ka concept bahut clear tha. Pata chala ki trading mein
